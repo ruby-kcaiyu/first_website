@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%=@title%></title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="head">
+<%=link_to_unless_current("Register",{action: "register"})%>
+
+
+<%=link_to_unless_current("Login", {action: "creat"})%>
+</div>
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<h2>Register</h2>
+<%= form_for :user do |f| %>
+<fieldset>
+		<legend>Enter Your Detial</legend>
+		<div class="form">
+		<%=f.label :Name%>
+		<%=f.text_field :name%>
+		</div>
+		<div class="form">
+		<%=f.label :Email%>
+		<%=f.text_field :email%>
+		</div>
+		<div class="form">
+		<%=f.label :Password%>
+		<%=f.password_field :password%>
+		</div>
+		<div class="form">
+		<div class="submit">
+		<%=submit_tag "Register", class: "btn btn-large btn-primary"%>
+		</div>
+		  </div>
+		  </fieldset>
+		  <p>计划让生活更流畅</p> 
+		  <div class="word">计划任务网站旨在让人们生活更有序，简洁，</BR>
+		<BR>  完全免费的服务</div>
+		<div class="image",width=1px>
+		   <%= image_tag "tasktab.png" %>
+		  </div>
+		  <h3>合理的规划自己的时间</h3>
+		  <h4>生活需要适当的安排</BR>
+		     <BR> 提高生活的质量</BR>	
+		    <br> 充分利用自己的时间</BR>
+		     
+		  <h4>
+<%end%>
