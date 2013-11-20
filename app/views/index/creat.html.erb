@@ -1,20 +1,17 @@
+<div class="span6 offset6">
+<div class="login">
 <h2>Login</h2>
+
 <%=form_for :user do |f|%>
-	<fieldset>
 		<legend>Enter Your Detials</legend>
-		<div class="form">
 		<%=f.label :Name%>
 		<%=f.text_field :name%>
-		</div>
-		<div class="form">
-		<%=f.label :Password%>
-		<%=f.password_field :password%>
-		</div>
-		<div class="form">
-		<div class="submit">
-		<%=submit_tag "Login", class: "btn-large"%>
-			</div>
-			  </div>
-	</fieldset>
-<%end%>
 		
+		<%=f.label :Password%>
+		<%=f.password_field :password%><br>
+		
+	<br>	<%=submit_tag "Login", class: "btn btn-large btn-primary"%>
+<%end%>
+<li> <%=link_to("还没有注册？",{action: "register"})%></li>
+ </div>
+ </div>

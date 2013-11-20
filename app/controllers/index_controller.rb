@@ -1,12 +1,13 @@
 class IndexController < ApplicationController
   def register
   	@title="Register"
+	@user=User.new
 	if request.post? and params[:user]
 		@user=User.new(user_params)
 		if @user.save
 			redirect_to :action=>"index"
 		else
-			render 'Register'
+			render 'register'
 		end
 	end
 		
@@ -20,7 +21,8 @@ class IndexController < ApplicationController
 		if user
 			redirect_to :action=>"index"
 		else
-			render 'register'
+		 flash.now[:error] = 'Invalid email/password combination'
+			redirect_to :action=>"register"
 		end
 	end
 

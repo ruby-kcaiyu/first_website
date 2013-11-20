@@ -45,3 +45,4 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'execjs'
 gem 'therubyracer'
+gem 'bootstrap-sass','2.3.2.0'
