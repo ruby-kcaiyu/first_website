@@ -1,9 +1,11 @@
 Exercise::Application.routes.draw do
+ resources :users
 #  get "index/register"
 #  get "index/creat"
-  root  to: 'index#index'
-  match '/creat', to:'index#creat',via: [:get,:post]
-  match '/register', to: 'index#register',via:[:get,:post]
+  root  to: 'users#index'
+  match '/creat', to:'users#creat',via: [:get,:post]
+ match '/register', to: 'users#register',via:[:get,:post]
+  match '/signout', to: 'users#destroy',     via: 'delete'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
